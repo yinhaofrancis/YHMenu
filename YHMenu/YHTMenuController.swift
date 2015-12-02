@@ -16,13 +16,13 @@ func convertRect(rect:CGRect,base:CGRect) -> CGRect
     result.size.height = rect.height > 1 ? rect.height : rect.height * base.height
     return result
 }
-class YHTMenuController: UIViewController,UIViewControllerTransitioningDelegate {
-    required init?(coder aDecoder: NSCoder) {
+public class YHTMenuController: UIViewController,UIViewControllerTransitioningDelegate {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.transitioningDelegate = self
         self.modalPresentationStyle = .Custom
     }
-    lazy var transAnimation:YHTAnimation = {
+   lazy public var transAnimation:YHTAnimation = {
         let animation = YHTAnimation()
         animation.isPresent = false
         animation.time = self.time
@@ -30,8 +30,8 @@ class YHTMenuController: UIViewController,UIViewControllerTransitioningDelegate 
         animation.startframe = self.startFrame
         return animation
     }()
-    @IBInspectable var isLeft:Bool = true
-    @IBInspectable var size:CGSize = CGSizeZero
+    @IBInspectable public var isLeft:Bool = true
+    @IBInspectable public var size:CGSize = CGSizeZero
     var interdismiss = YHTInteractive()
     weak var interpresent:YHTPresentInteractive?
     var startFrame:CGRect = CGRectZero{
@@ -44,26 +44,26 @@ class YHTMenuController: UIViewController,UIViewControllerTransitioningDelegate 
             self.endFrame = convertRect(self.endFrame, base: UIScreen.mainScreen().bounds)
         }
     }
-    @IBInspectable var maskColor:UIColor = UIColor.clearColor()
-    @IBInspectable var time:Double = 0.5
-    override func viewDidLoad() {
+    @IBInspectable public var maskColor:UIColor = UIColor.clearColor()
+    @IBInspectable public var time:Double = 0.5
+    override public func viewDidLoad() {
         super.viewDidLoad()
         interdismiss.hookViewController(self)
     }
 
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         self.transAnimation.isPresent = false
         return self.transAnimation
     }
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         self.transAnimation.isPresent = true
         return self.transAnimation
     }
-    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
+    public func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
         if isLeft{
             self.startFrame = CGRectMake(-self.size.width, 0, self.size.width, self.size.height)
             self.endFrame = CGRectMake(0, 0, self.size.width, self.size.height)
@@ -77,7 +77,7 @@ class YHTMenuController: UIViewController,UIViewControllerTransitioningDelegate 
         present.startFrame = self.startFrame
         return present
     }
-    func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    public func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         if interpresent == nil
         {
             return interpresent
@@ -87,24 +87,24 @@ class YHTMenuController: UIViewController,UIViewControllerTransitioningDelegate 
             return interpresent!.active ? interpresent : nil
         }
     }
-    func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    public func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         interdismiss.isleft = self.isLeft
 
         interdismiss.frame = self.endFrame
         return interdismiss.active ? interdismiss : nil
     }
 }
-class YHTPresentController: UIPresentationController {
+public class YHTPresentController: UIPresentationController {
     let maskView:UIView = UIView()
-    var maskColor:UIColor = UIColor.clearColor()
-    var startFrame:CGRect = CGRectZero
-    override func presentationTransitionWillBegin() {
+    public var maskColor:UIColor = UIColor.clearColor()
+    public var startFrame:CGRect = CGRectZero
+    override public func presentationTransitionWillBegin() {
         config()
         presentingViewController.transitionCoordinator()?.animateAlongsideTransition({ (context:UIViewControllerTransitionCoordinatorContext) -> Void in
                 self.maskView.alpha = 1
             }, completion: nil)
     }
-    override func dismissalTransitionWillBegin() {
+    override public func dismissalTransitionWillBegin() {
         presentingViewController.transitionCoordinator()?.animateAlongsideTransition({ (context:UIViewControllerTransitionCoordinatorContext) -> Void in
             self.maskView.alpha = 0
             }, completion: nil)
@@ -131,19 +131,19 @@ class YHTPresentController: UIPresentationController {
     {
         self.presentedViewController.dismissViewControllerAnimated(true, completion: nil)
     }
-    override func frameOfPresentedViewInContainerView() -> CGRect {
+    override public func frameOfPresentedViewInContainerView() -> CGRect {
         return convertRect(startFrame, base: self.containerView!.frame)
     }
 }
-class YHTAnimation: NSObject,UIViewControllerAnimatedTransitioning {
-    var time:NSTimeInterval = 0
-    var isPresent:Bool = true
-    var endframe:CGRect = CGRectZero
-    var startframe:CGRect = CGRectZero
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+public class YHTAnimation: NSObject,UIViewControllerAnimatedTransitioning {
+    public var time:NSTimeInterval = 0
+    public var isPresent:Bool = true
+    public var endframe:CGRect = CGRectZero
+    public var startframe:CGRect = CGRectZero
+    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return time
     }
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let view = self.getView(transitionContext)
         let end = isPresent ? endframe : startframe
         UIView.animateWithDuration(time, delay: 0, options: UIViewAnimationOptions.AllowUserInteraction, animations: {() -> Void in
@@ -164,14 +164,14 @@ class YHTAnimation: NSObject,UIViewControllerAnimatedTransitioning {
         transitionContext.completeTransition(value)
     }
 }
-class YHTInteractive: UIPercentDrivenInteractiveTransition {
-    var active = false
-    var start = CGPointZero
-    var isleft = true
-    var shouldFinish = false
-    weak var fromVC:UIViewController?
-    var frame = CGRectZero
-    func hookViewController(vc:UIViewController)
+public class YHTInteractive: UIPercentDrivenInteractiveTransition {
+    public var active = false
+    public var start = CGPointZero
+    public var isleft = true
+    public var shouldFinish = false
+    weak public var fromVC:UIViewController?
+    public var frame = CGRectZero
+    public func hookViewController(vc:UIViewController)
     {
         self.fromVC = vc
         self.fromVC!.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "location:"))
@@ -204,16 +204,16 @@ class YHTInteractive: UIPercentDrivenInteractiveTransition {
         }
     }
 }
-class YHTPresentInteractive: UIPercentDrivenInteractiveTransition {
-    var active = false
-    var start = CGPointZero
-    var isleft = true
-    var shouldFinish = false
-    weak var fromVC:UIViewController?
-    weak var toVC:UIViewController?
-    var frame = CGRectZero
-    var PresentID:String = "panMenu"
-    func hookViewController(vc:UIViewController,fromID:String)
+public class YHTPresentInteractive: UIPercentDrivenInteractiveTransition {
+    public var active = false
+    public var start = CGPointZero
+    public var isleft = true
+    public var shouldFinish = false
+    weak public var fromVC:UIViewController?
+    weak public var toVC:UIViewController?
+    public var frame = CGRectZero
+    public var PresentID:String = "panMenu"
+    public func hookViewController(vc:UIViewController,fromID:String)
     {
         self.fromVC = vc
         let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: "location:")
