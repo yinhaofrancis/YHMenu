@@ -10,8 +10,6 @@
 		B2AF59F71BE097B20029036C /* YHMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AF59F61BE097B20029036C /* YHMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2AF59FE1BE097B20029036C /* YHMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF59F31BE097B20029036C /* YHMenu.framework */; };
 		B2AF5A031BE097B20029036C /* YHMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AF5A021BE097B20029036C /* YHMenuTests.swift */; };
-		B2D2EE6F1BE218E5004024A0 /* YHTMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65BC21BE1BAB10069194E /* YHTMenuController.swift */; };
-		B2D2EE701BE21D61004024A0 /* YHTMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65BC21BE1BAB10069194E /* YHTMenuController.swift */; };
 		B2D2EE721BE21DA0004024A0 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2EE711BE21DA0004024A0 /* menuViewController.swift */; };
 		B2F65B951BE1BA340069194E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65B941BE1BA340069194E /* AppDelegate.swift */; };
 		B2F65B971BE1BA340069194E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65B961BE1BA340069194E /* ViewController.swift */; };
@@ -20,6 +18,8 @@
 		B2F65B9F1BE1BA340069194E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F65B9D1BE1BA340069194E /* LaunchScreen.storyboard */; };
 		B2F65BAA1BE1BA350069194E /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65BA91BE1BA350069194E /* testTests.swift */; };
 		B2F65BB51BE1BA350069194E /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65BB41BE1BA350069194E /* testUITests.swift */; };
+		B2FCDA1C1C0E9E64008517B2 /* YHTMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCDA1B1C0E9E64008517B2 /* YHTMenuController.swift */; };
+		B2FCDA1D1C0E9E6D008517B2 /* YHTMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCDA1B1C0E9E64008517B2 /* YHTMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 		B2F65BB01BE1BA350069194E /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F65BB41BE1BA350069194E /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		B2F65BB61BE1BA350069194E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2F65BC21BE1BAB10069194E /* YHTMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YHTMenuController.swift; path = ../test/YHTMenuController.swift; sourceTree = "<group>"; };
+		B2FCDA1B1C0E9E64008517B2 /* YHTMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHTMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 			children = (
 				B2AF59F61BE097B20029036C /* YHMenu.h */,
 				B2AF59F81BE097B20029036C /* Info.plist */,
-				B2F65BC21BE1BAB10069194E /* YHTMenuController.swift */,
+				B2FCDA1B1C0E9E64008517B2 /* YHTMenuController.swift */,
 			);
 			path = YHMenu;
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2D2EE6F1BE218E5004024A0 /* YHTMenuController.swift in Sources */,
+				B2FCDA1C1C0E9E64008517B2 /* YHTMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,8 +401,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FCDA1D1C0E9E6D008517B2 /* YHTMenuController.swift in Sources */,
 				B2F65B971BE1BA340069194E /* ViewController.swift in Sources */,
-				B2D2EE701BE21D61004024A0 /* YHTMenuController.swift in Sources */,
 				B2F65B951BE1BA340069194E /* AppDelegate.swift in Sources */,
 				B2D2EE721BE21DA0004024A0 /* menuViewController.swift in Sources */,
 			);
@@ -564,6 +564,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = YHMenu/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.cheerapp.YHMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -583,6 +584,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = YHMenu/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.cheerapp.YHMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
