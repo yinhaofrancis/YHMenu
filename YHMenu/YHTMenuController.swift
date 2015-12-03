@@ -7,6 +7,7 @@
 //
 
 import UIKit
+let kYHTPresentControllerPresentComplete = "YHTPresentControllerPresentComplete"
 func convertRect(rect:CGRect,base:CGRect) -> CGRect
 {
     var result = rect
@@ -102,7 +103,9 @@ public class YHTPresentController: UIPresentationController {
         config()
         presentingViewController.transitionCoordinator()?.animateAlongsideTransition({ (context:UIViewControllerTransitionCoordinatorContext) -> Void in
                 self.maskView.alpha = 1
-            }, completion: nil)
+            }, completion: {(_) in
+                NSNotificationCenter.defaultCenter().postNotificationName(kYHTPresentControllerPresentComplete, object: nil)
+        })
     }
     override public func dismissalTransitionWillBegin() {
         presentingViewController.transitionCoordinator()?.animateAlongsideTransition({ (context:UIViewControllerTransitionCoordinatorContext) -> Void in
