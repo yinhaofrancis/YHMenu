@@ -97,7 +97,7 @@ public class YHTMenuController: UIViewController,UIViewControllerTransitioningDe
 }
 public class YHTPresentController: UIPresentationController {
     let maskView:UIView = UIView()
-    public var maskColor:UIColor = UIColor.clearColor()
+    public var maskColor:UIColor?
     public var startFrame:CGRect = CGRectZero
     override public func presentationTransitionWillBegin() {
         config()
@@ -114,14 +114,19 @@ public class YHTPresentController: UIPresentationController {
     }
     private func config()
     {
+        if maskColor == nil
+        {
+            maskView.backgroundColor = UIColor.clearColor()
+            let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+            effectView.frame = maskView.bounds
+            effectView.autoresizingMask = [.FlexibleHeight,.FlexibleWidth]
+            maskView.addSubview(effectView)
+        }
         maskView.backgroundColor = self.maskColor
         maskView.alpha = 0
         maskView.frame = self.containerView!.bounds
         maskView.autoresizingMask = [.FlexibleHeight,.FlexibleWidth]
-        let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
-        maskView.addSubview(effectView)
-        effectView.frame = maskView.bounds
-        effectView.autoresizingMask = [.FlexibleHeight,.FlexibleWidth]
+        
         self.containerView?.addSubview(maskView)
         self.containerView?.addSubview(self.presentedView()!)
         presentedView()?.frame = self.startFrame
