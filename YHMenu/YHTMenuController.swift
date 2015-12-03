@@ -33,6 +33,8 @@ public class YHTMenuController: UIViewController,UIViewControllerTransitioningDe
     }()
     @IBInspectable public var isLeft:Bool = true
     @IBInspectable public var size:CGSize = CGSizeZero
+    @IBInspectable public var useBlur:Bool = true
+    @IBInspectable public var alpha:CGFloat = 0.3
     var interdismiss = YHTInteractive()
     weak var interpresent:YHTPresentInteractive?
     var startFrame:CGRect = CGRectZero{
@@ -76,6 +78,8 @@ public class YHTMenuController: UIViewController,UIViewControllerTransitioningDe
         let present = YHTPresentController(presentedViewController: presented, presentingViewController: presenting)
         present.maskColor = self.maskColor
         present.startFrame = self.startFrame
+        present.userBlur = self.useBlur
+        present.alpha = self.alpha
         return present
     }
     public func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
@@ -97,12 +101,15 @@ public class YHTMenuController: UIViewController,UIViewControllerTransitioningDe
 }
 public class YHTPresentController: UIPresentationController {
     let maskView:UIView = UIView()
-    public var maskColor:UIColor?
+    public var maskColor:UIColor? = nil
     public var startFrame:CGRect = CGRectZero
+    private var effectView:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+    public var userBlur = true
+    public var alpha:CGFloat = 0.3
     override public func presentationTransitionWillBegin() {
-        config()
-        presentingViewController.transitionCoordinator()?.animateAlongsideTransition({ (context:UIViewControllerTransitionCoordinatorContext) -> Void in
-                self.maskView.alpha = 1
+        self.config()
+        self.presentingViewController.transitionCoordinator()?.animateAlongsideTransition({ (context:UIViewControllerTransitionCoordinatorContext) -> Void in
+            self.maskView.alpha = self.alpha
             }, completion: {(_) in
                 NSNotificationCenter.defaultCenter().postNotificationName(kYHTPresentControllerPresentComplete, object: nil)
         })
@@ -114,26 +121,25 @@ public class YHTPresentController: UIPresentationController {
     }
     private func config()
     {
-        if maskColor == nil
-        {
-            maskView.backgroundColor = UIColor.clearColor()
-            let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
-            effectView.frame = maskView.bounds
-            effectView.autoresizingMask = [.FlexibleHeight,.FlexibleWidth]
-            maskView.addSubview(effectView)
-        }
-        maskView.backgroundColor = self.maskColor
-        maskView.alpha = 0
-        maskView.frame = self.containerView!.bounds
-        maskView.autoresizingMask = [.FlexibleHeight,.FlexibleWidth]
-        
-        self.containerView?.addSubview(maskView)
-        self.containerView?.addSubview(self.presentedView()!)
-        presentedView()?.frame = self.startFrame
-        self.maskView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "back"))
+        self.presentedView()?.frame = self.startFrame
+        self.maskView.alpha = 0
         self.presentedView()?.layer.shadowColor = UIColor.blackColor().CGColor
         self.presentedView()?.layer.shadowOpacity = 0.8
         self.presentedView()?.layer.shadowRadius = 4
+        if self.userBlur == true
+        {
+            self.maskView.backgroundColor = UIColor.clearColor()
+            self.effectView.frame = self.maskView.bounds
+            self.effectView.autoresizingMask = [.FlexibleHeight,.FlexibleWidth]
+            maskView.addSubview(effectView)
+            
+        }
+        self.maskView.backgroundColor = self.maskColor
+        self.maskView.frame = self.containerView!.bounds
+        self.maskView.autoresizingMask = [.FlexibleHeight,.FlexibleWidth]
+        self.maskView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "back"))
+        self.containerView?.addSubview(maskView)
+        self.containerView?.addSubview(self.presentedView()!)
     }
     func back()
     {
@@ -154,7 +160,7 @@ public class YHTAnimation: NSObject,UIViewControllerAnimatedTransitioning {
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let view = self.getView(transitionContext)
         let end = isPresent ? endframe : startframe
-        UIView.animateWithDuration(time, delay: 0, options: UIViewAnimationOptions.AllowUserInteraction, animations: {() -> Void in
+        UIView.animateWithDuration(time, delay: 0, options: [.AllowUserInteraction,.CurveEaseOut], animations: {() -> Void in
             view?.frame = end
             }) { (_) -> Void in
                 self.animationComplete(transitionContext)
