@@ -10,7 +10,6 @@
 		B2AF59F71BE097B20029036C /* YHMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AF59F61BE097B20029036C /* YHMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2AF59FE1BE097B20029036C /* YHMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF59F31BE097B20029036C /* YHMenu.framework */; };
 		B2AF5A031BE097B20029036C /* YHMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AF5A021BE097B20029036C /* YHMenuTests.swift */; };
-		B2D2EE721BE21DA0004024A0 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2EE711BE21DA0004024A0 /* menuViewController.swift */; };
 		B2F65B951BE1BA340069194E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65B941BE1BA340069194E /* AppDelegate.swift */; };
 		B2F65B971BE1BA340069194E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65B961BE1BA340069194E /* ViewController.swift */; };
 		B2F65B9A1BE1BA340069194E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F65B981BE1BA340069194E /* Main.storyboard */; };
@@ -53,7 +52,6 @@
 		B2AF59FD1BE097B20029036C /* YHMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YHMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AF5A021BE097B20029036C /* YHMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHMenuTests.swift; sourceTree = "<group>"; };
 		B2AF5A041BE097B20029036C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2D2EE711BE21DA0004024A0 /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		B2F65B921BE1BA340069194E /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F65B941BE1BA340069194E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2F65B961BE1BA340069194E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 			children = (
 				B2F65B941BE1BA340069194E /* AppDelegate.swift */,
 				B2F65B961BE1BA340069194E /* ViewController.swift */,
-				B2D2EE711BE21DA0004024A0 /* menuViewController.swift */,
 				B2F65B981BE1BA340069194E /* Main.storyboard */,
 				B2F65B9B1BE1BA340069194E /* Assets.xcassets */,
 				B2F65B9D1BE1BA340069194E /* LaunchScreen.storyboard */,
@@ -404,7 +401,6 @@
 				B2FCDA1D1C0E9E6D008517B2 /* YHTMenuController.swift in Sources */,
 				B2F65B971BE1BA340069194E /* ViewController.swift in Sources */,
 				B2F65B951BE1BA340069194E /* AppDelegate.swift in Sources */,
-				B2D2EE721BE21DA0004024A0 /* menuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
