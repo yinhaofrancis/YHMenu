@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B2A585E01C4491810022E3BE /* YHMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF59F31BE097B20029036C /* YHMenu.framework */; };
 		B2A585E11C4491810022E3BE /* YHMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF59F31BE097B20029036C /* YHMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B2A585E61C44C5700022E3BE /* popoverMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A585E51C44C5700022E3BE /* popoverMenuController.swift */; };
+		B2A585E61C44C5700022E3BE /* YHPopoverMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A585E51C44C5700022E3BE /* YHPopoverMenuController.swift */; };
 		B2A585E81C44CC5D0022E3BE /* YHPopoverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A585E71C44CC5D0022E3BE /* YHPopoverAnimation.swift */; };
 		B2A585EC1C44DBF30022E3BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A585E91C44DBBC0022E3BE /* Main.storyboard */; };
 		B2AF59F71BE097B20029036C /* YHMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AF59F61BE097B20029036C /* YHMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,7 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B2A585E51C44C5700022E3BE /* popoverMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popoverMenuController.swift; sourceTree = "<group>"; };
+		B2A585E51C44C5700022E3BE /* YHPopoverMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPopoverMenuController.swift; sourceTree = "<group>"; };
 		B2A585E71C44CC5D0022E3BE /* YHPopoverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPopoverAnimation.swift; sourceTree = "<group>"; };
 		B2A585EA1C44DBBC0022E3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = test/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2AF59F31BE097B20029036C /* YHMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YHMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,7 +176,7 @@
 				B2AF59F61BE097B20029036C /* YHMenu.h */,
 				B2AF59F81BE097B20029036C /* Info.plist */,
 				B2E967861C43A5ED00D8DDA3 /* YHDropMenuController.swift */,
-				B2A585E51C44C5700022E3BE /* popoverMenuController.swift */,
+				B2A585E51C44C5700022E3BE /* YHPopoverMenuController.swift */,
 			);
 			path = YHMenu;
 			sourceTree = "<group>";
@@ -437,7 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E967951C43AA2D00D8DDA3 /* YHTPresentInteractive.swift in Sources */,
-				B2A585E61C44C5700022E3BE /* popoverMenuController.swift in Sources */,
+				B2A585E61C44C5700022E3BE /* YHPopoverMenuController.swift in Sources */,
 				B2E967931C43AA0C00D8DDA3 /* YHTInteractive.swift in Sources */,
 				B2E967871C43A5ED00D8DDA3 /* YHDropMenuController.swift in Sources */,
 				B2E9678E1C43A94000D8DDA3 /* YHTAnimation.swift in Sources */,

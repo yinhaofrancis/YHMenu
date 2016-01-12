@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class popoverMenuController: YHTMenuController {
+public class YHPopoverMenuController: YHTMenuController {
     
     public override func setStartAndEnd() {
         self.startFrame = CGRect(x: 0.1, y: 0.1, width: 0.8, height: 0.8)
