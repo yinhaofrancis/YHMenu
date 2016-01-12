@@ -7,33 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2A585E01C4491810022E3BE /* YHMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF59F31BE097B20029036C /* YHMenu.framework */; };
+		B2A585E11C4491810022E3BE /* YHMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF59F31BE097B20029036C /* YHMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2A585E61C44C5700022E3BE /* popoverMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A585E51C44C5700022E3BE /* popoverMenuController.swift */; };
+		B2A585E81C44CC5D0022E3BE /* YHPopoverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A585E71C44CC5D0022E3BE /* YHPopoverAnimation.swift */; };
+		B2A585EC1C44DBF30022E3BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A585E91C44DBBC0022E3BE /* Main.storyboard */; };
 		B2AF59F71BE097B20029036C /* YHMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AF59F61BE097B20029036C /* YHMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2AF59FE1BE097B20029036C /* YHMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF59F31BE097B20029036C /* YHMenu.framework */; };
 		B2AF5A031BE097B20029036C /* YHMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AF5A021BE097B20029036C /* YHMenuTests.swift */; };
 		B2E967871C43A5ED00D8DDA3 /* YHDropMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E967861C43A5ED00D8DDA3 /* YHDropMenuController.swift */; };
-		B2E967881C43A5F100D8DDA3 /* YHDropMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E967861C43A5ED00D8DDA3 /* YHDropMenuController.swift */; };
-		B2E9678A1C43A89400D8DDA3 /* YHLMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E967891C43A89400D8DDA3 /* YHLMenuController.swift */; };
 		B2E9678C1C43A8BF00D8DDA3 /* YHTPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9678B1C43A8BF00D8DDA3 /* YHTPresentController.swift */; };
 		B2E9678E1C43A94000D8DDA3 /* YHTAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9678D1C43A94000D8DDA3 /* YHTAnimation.swift */; };
-		B2E9678F1C43A9E500D8DDA3 /* YHLMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E967891C43A89400D8DDA3 /* YHLMenuController.swift */; };
-		B2E967901C43A9E500D8DDA3 /* YHTPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9678B1C43A8BF00D8DDA3 /* YHTPresentController.swift */; };
-		B2E967911C43A9E500D8DDA3 /* YHTAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9678D1C43A94000D8DDA3 /* YHTAnimation.swift */; };
 		B2E967931C43AA0C00D8DDA3 /* YHTInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E967921C43AA0C00D8DDA3 /* YHTInteractive.swift */; };
 		B2E967951C43AA2D00D8DDA3 /* YHTPresentInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E967941C43AA2D00D8DDA3 /* YHTPresentInteractive.swift */; };
-		B2E967961C43AA4100D8DDA3 /* YHTPresentInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E967941C43AA2D00D8DDA3 /* YHTPresentInteractive.swift */; };
-		B2E967971C43AA4100D8DDA3 /* YHTInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E967921C43AA0C00D8DDA3 /* YHTInteractive.swift */; };
 		B2F65B951BE1BA340069194E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65B941BE1BA340069194E /* AppDelegate.swift */; };
 		B2F65B971BE1BA340069194E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65B961BE1BA340069194E /* ViewController.swift */; };
-		B2F65B9A1BE1BA340069194E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F65B981BE1BA340069194E /* Main.storyboard */; };
 		B2F65B9C1BE1BA340069194E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F65B9B1BE1BA340069194E /* Assets.xcassets */; };
 		B2F65B9F1BE1BA340069194E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F65B9D1BE1BA340069194E /* LaunchScreen.storyboard */; };
 		B2F65BAA1BE1BA350069194E /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65BA91BE1BA350069194E /* testTests.swift */; };
 		B2F65BB51BE1BA350069194E /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F65BB41BE1BA350069194E /* testUITests.swift */; };
 		B2FCDA1C1C0E9E64008517B2 /* YHTMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCDA1B1C0E9E64008517B2 /* YHTMenuController.swift */; };
-		B2FCDA1D1C0E9E6D008517B2 /* YHTMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCDA1B1C0E9E64008517B2 /* YHTMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B2A585E21C4491810022E3BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2AF59EA1BE097B20029036C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2AF59F21BE097B20029036C;
+			remoteInfo = YHMenu;
+		};
 		B2AF59FF1BE097B20029036C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B2AF59EA1BE097B20029036C /* Project object */;
@@ -57,7 +60,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B2A585E41C4491820022E3BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B2A585E11C4491810022E3BE /* YHMenu.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B2A585E51C44C5700022E3BE /* popoverMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popoverMenuController.swift; sourceTree = "<group>"; };
+		B2A585E71C44CC5D0022E3BE /* YHPopoverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPopoverAnimation.swift; sourceTree = "<group>"; };
+		B2A585EA1C44DBBC0022E3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = test/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2AF59F31BE097B20029036C /* YHMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YHMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AF59F61BE097B20029036C /* YHMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHMenu.h; sourceTree = "<group>"; };
 		B2AF59F81BE097B20029036C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +85,6 @@
 		B2AF5A021BE097B20029036C /* YHMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHMenuTests.swift; sourceTree = "<group>"; };
 		B2AF5A041BE097B20029036C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2E967861C43A5ED00D8DDA3 /* YHDropMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHDropMenuController.swift; sourceTree = "<group>"; };
-		B2E967891C43A89400D8DDA3 /* YHLMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHLMenuController.swift; sourceTree = "<group>"; };
 		B2E9678B1C43A8BF00D8DDA3 /* YHTPresentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHTPresentController.swift; sourceTree = "<group>"; };
 		B2E9678D1C43A94000D8DDA3 /* YHTAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHTAnimation.swift; sourceTree = "<group>"; };
 		B2E967921C43AA0C00D8DDA3 /* YHTInteractive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHTInteractive.swift; sourceTree = "<group>"; };
@@ -73,7 +92,6 @@
 		B2F65B921BE1BA340069194E /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F65B941BE1BA340069194E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2F65B961BE1BA340069194E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B2F65B991BE1BA340069194E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2F65B9B1BE1BA340069194E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2F65B9E1BE1BA340069194E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2F65BA01BE1BA340069194E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A585E01C4491810022E3BE /* YHMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,8 +175,8 @@
 				B2E967981C43B62000D8DDA3 /* base */,
 				B2AF59F61BE097B20029036C /* YHMenu.h */,
 				B2AF59F81BE097B20029036C /* Info.plist */,
-				B2E967891C43A89400D8DDA3 /* YHLMenuController.swift */,
 				B2E967861C43A5ED00D8DDA3 /* YHDropMenuController.swift */,
+				B2A585E51C44C5700022E3BE /* popoverMenuController.swift */,
 			);
 			path = YHMenu;
 			sourceTree = "<group>";
@@ -177,6 +196,7 @@
 				B2FCDA1B1C0E9E64008517B2 /* YHTMenuController.swift */,
 				B2E9678B1C43A8BF00D8DDA3 /* YHTPresentController.swift */,
 				B2E9678D1C43A94000D8DDA3 /* YHTAnimation.swift */,
+				B2A585E71C44CC5D0022E3BE /* YHPopoverAnimation.swift */,
 				B2E967921C43AA0C00D8DDA3 /* YHTInteractive.swift */,
 				B2E967941C43AA2D00D8DDA3 /* YHTPresentInteractive.swift */,
 			);
@@ -188,7 +208,7 @@
 			children = (
 				B2F65B941BE1BA340069194E /* AppDelegate.swift */,
 				B2F65B961BE1BA340069194E /* ViewController.swift */,
-				B2F65B981BE1BA340069194E /* Main.storyboard */,
+				B2A585E91C44DBBC0022E3BE /* Main.storyboard */,
 				B2F65B9B1BE1BA340069194E /* Assets.xcassets */,
 				B2F65B9D1BE1BA340069194E /* LaunchScreen.storyboard */,
 				B2F65BA01BE1BA340069194E /* Info.plist */,
@@ -271,10 +291,12 @@
 				B2F65B8E1BE1BA340069194E /* Sources */,
 				B2F65B8F1BE1BA340069194E /* Frameworks */,
 				B2F65B901BE1BA340069194E /* Resources */,
+				B2A585E41C4491820022E3BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B2A585E31C4491810022E3BE /* PBXTargetDependency */,
 			);
 			name = test;
 			productName = test;
@@ -387,9 +409,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A585EC1C44DBF30022E3BE /* Main.storyboard in Resources */,
 				B2F65B9F1BE1BA340069194E /* LaunchScreen.storyboard in Resources */,
 				B2F65B9C1BE1BA340069194E /* Assets.xcassets in Resources */,
-				B2F65B9A1BE1BA340069194E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,12 +437,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E967951C43AA2D00D8DDA3 /* YHTPresentInteractive.swift in Sources */,
+				B2A585E61C44C5700022E3BE /* popoverMenuController.swift in Sources */,
 				B2E967931C43AA0C00D8DDA3 /* YHTInteractive.swift in Sources */,
 				B2E967871C43A5ED00D8DDA3 /* YHDropMenuController.swift in Sources */,
-				B2E9678A1C43A89400D8DDA3 /* YHLMenuController.swift in Sources */,
 				B2E9678E1C43A94000D8DDA3 /* YHTAnimation.swift in Sources */,
 				B2FCDA1C1C0E9E64008517B2 /* YHTMenuController.swift in Sources */,
 				B2E9678C1C43A8BF00D8DDA3 /* YHTPresentController.swift in Sources */,
+				B2A585E81C44CC5D0022E3BE /* YHPopoverAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,15 +459,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2E967971C43AA4100D8DDA3 /* YHTInteractive.swift in Sources */,
-				B2E967881C43A5F100D8DDA3 /* YHDropMenuController.swift in Sources */,
-				B2FCDA1D1C0E9E6D008517B2 /* YHTMenuController.swift in Sources */,
-				B2E967961C43AA4100D8DDA3 /* YHTPresentInteractive.swift in Sources */,
-				B2E967911C43A9E500D8DDA3 /* YHTAnimation.swift in Sources */,
 				B2F65B971BE1BA340069194E /* ViewController.swift in Sources */,
 				B2F65B951BE1BA340069194E /* AppDelegate.swift in Sources */,
-				B2E9678F1C43A9E500D8DDA3 /* YHLMenuController.swift in Sources */,
-				B2E967901C43A9E500D8DDA3 /* YHTPresentController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +483,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B2A585E31C4491810022E3BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2AF59F21BE097B20029036C /* YHMenu */;
+			targetProxy = B2A585E21C4491810022E3BE /* PBXContainerItemProxy */;
+		};
 		B2AF5A001BE097B20029036C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B2AF59F21BE097B20029036C /* YHMenu */;
@@ -485,12 +506,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B2F65B981BE1BA340069194E /* Main.storyboard */ = {
+		B2A585E91C44DBBC0022E3BE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B2F65B991BE1BA340069194E /* Base */,
+				B2A585EA1C44DBBC0022E3BE /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B2F65B9D1BE1BA340069194E /* LaunchScreen.storyboard */ = {
@@ -656,6 +678,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.cheerapp.test;
@@ -667,6 +691,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.cheerapp.test;

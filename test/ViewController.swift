@@ -7,15 +7,14 @@
 //
 
 import UIKit
-
+import YHMenu
 class ViewController: UIViewController {
 
+    var controller:UIViewController?
     let inteactive = YHTPresentInteractive()
     override func viewDidLoad() {
         super.viewDidLoad()
-        inteactive.hookViewController(self, fromID: "panMenu")
-        self.image.layer.cornerRadius = self.image.frame.width / 2
-        // Do any additional setup after loading the view, typically from a nib.
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("panMenu");
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,4 +34,7 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func pop(sender: AnyObject) {
+//        self.presentViewController(self.controller!, animated: true, completion: nil)
+    }
 }

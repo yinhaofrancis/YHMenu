@@ -37,9 +37,7 @@ public class YHTPresentController: UIPresentationController {
     {
         self.presentedView()?.frame = self.startFrame
         self.maskView.alpha = 0
-        self.presentedView()?.layer.shadowColor = UIColor.blackColor().CGColor
-        self.presentedView()?.layer.shadowOpacity = 0.8
-        self.presentedView()?.layer.shadowRadius = 4
+        buildShadow(self.presentedView()!.layer)
         self.maskView.backgroundColor = self.maskColor
         self.maskView.frame = self.containerView!.bounds
         self.maskView.autoresizingMask = [.FlexibleHeight,.FlexibleWidth]
@@ -53,6 +51,13 @@ public class YHTPresentController: UIPresentationController {
     }
     override public func frameOfPresentedViewInContainerView() -> CGRect {
         return convertRect(startFrame, base: self.containerView!.frame)
+    }
+    public func buildShadow(layer:CALayer)
+    {
+        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowOpacity = 0.8
+        layer.shadowRadius = 4
+        layer.shadowOffset = CGSize(width: 4, height: 4)
     }
 }
 
