@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WcR-nm-UZK">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -67,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="1496.25" y="483.80281690140839"/>
         </scene>
-        <!--Popover Menu Controller-->
+        <!--View Controller-->
         <scene sceneID="7y7-Wg-WNK">
             <objects>
-                <viewController storyboardIdentifier="panMenu" id="zo1-P5-AMV" customClass="popoverMenuController" customModule="YHMenu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="panMenu" id="zo1-P5-AMV" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B9Y-Lk-Bgk"/>
                         <viewControllerLayoutGuide type="bottom" id="6DM-sq-lci"/>
@@ -91,22 +90,30 @@
                             <constraint firstItem="Nwo-FF-N3U" firstAttribute="leading" secondItem="TLR-by-eqS" secondAttribute="leading" id="zIo-pO-KBc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="trans" destination="icj-am-6H4" id="kl8-WI-qpV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdV-Ai-fSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="icj-am-6H4" customClass="YHMenuDelegate" customModule="YHMenu">
                     <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="rect" keyPath="target">
+                            <rect key="value" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="alpha">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="maskColor">
+                            <color key="value" red="0.46267008781433105" green="0.98161131143569946" blue="0.026489552110433578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="time">
                             <real key="value" value="0.29999999999999999"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="alpha">
-                            <real key="value" value="0.10000000000000001"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="maskColor">
-                            <color key="value" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="rect" keyPath="target">
-                            <rect key="value" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
-                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fdV-Ai-fSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="viewController" destination="zo1-P5-AMV" id="3Y1-hZ-EhD"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="2431.875" y="501.76056338028167"/>
         </scene>
