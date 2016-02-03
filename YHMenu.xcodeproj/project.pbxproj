@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B23CFEC81C5743F300A6CB3B /* YHMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23CFEC71C5743F300A6CB3B /* YHMenuDelegate.swift */; };
+		B2017A1B1C6194C600675F9D /* PresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2017A181C6194C600675F9D /* PresentController.swift */; };
+		B2017A1C1C6194C600675F9D /* PresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2017A181C6194C600675F9D /* PresentController.swift */; };
+		B2017A1D1C6194C600675F9D /* indicateSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2017A191C6194C600675F9D /* indicateSegue.swift */; };
+		B2017A1E1C6194C600675F9D /* indicateSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2017A191C6194C600675F9D /* indicateSegue.swift */; };
+		B2017A1F1C6194C600675F9D /* processView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2017A1A1C6194C600675F9D /* processView.swift */; };
+		B2017A201C6194C600675F9D /* processView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2017A1A1C6194C600675F9D /* processView.swift */; };
 		B23CFEC91C57443500A6CB3B /* YHDropMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E967861C43A5ED00D8DDA3 /* YHDropMenuController.swift */; };
 		B23CFECA1C57443700A6CB3B /* YHPopoverMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A585E51C44C5700022E3BE /* YHPopoverMenuController.swift */; };
 		B2A585E01C4491810022E3BE /* YHMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF59F31BE097B20029036C /* YHMenu.framework */; };
@@ -78,6 +83,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B2017A181C6194C600675F9D /* PresentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentController.swift; sourceTree = "<group>"; };
+		B2017A191C6194C600675F9D /* indicateSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = indicateSegue.swift; sourceTree = "<group>"; };
+		B2017A1A1C6194C600675F9D /* processView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = processView.swift; sourceTree = "<group>"; };
 		B23CFEC71C5743F300A6CB3B /* YHMenuDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHMenuDelegate.swift; sourceTree = "<group>"; };
 		B2A585E51C44C5700022E3BE /* YHPopoverMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPopoverMenuController.swift; sourceTree = "<group>"; };
 		B2A585E71C44CC5D0022E3BE /* YHPopoverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPopoverAnimation.swift; sourceTree = "<group>"; };
@@ -199,6 +207,9 @@
 		B2E967981C43B62000D8DDA3 /* base */ = {
 			isa = PBXGroup;
 			children = (
+				B2017A181C6194C600675F9D /* PresentController.swift */,
+				B2017A191C6194C600675F9D /* indicateSegue.swift */,
+				B2017A1A1C6194C600675F9D /* processView.swift */,
 				B2FCDA1B1C0E9E64008517B2 /* YHTMenuController.swift */,
 				B2E9678B1C43A8BF00D8DDA3 /* YHTPresentController.swift */,
 				B2A585EF1C44E28B0022E3BE /* YHTSegue.swift */,
@@ -448,12 +459,14 @@
 				B2E967951C43AA2D00D8DDA3 /* YHTPresentInteractive.swift in Sources */,
 				B2E967931C43AA0C00D8DDA3 /* YHTInteractive.swift in Sources */,
 				B2A585F01C44E28B0022E3BE /* YHTSegue.swift in Sources */,
-				B2E967871C43A5ED00D8DDA3 /* YHDropMenuController.swift in Sources */,
 				B2E9678E1C43A94000D8DDA3 /* YHTAnimation.swift in Sources */,
 				B23CFEC91C57443500A6CB3B /* YHDropMenuController.swift in Sources */,
+				B2017A1D1C6194C600675F9D /* indicateSegue.swift in Sources */,
 				B2FCDA1C1C0E9E64008517B2 /* YHTMenuController.swift in Sources */,
 				B2E9678C1C43A8BF00D8DDA3 /* YHTPresentController.swift in Sources */,
+				B2017A1B1C6194C600675F9D /* PresentController.swift in Sources */,
 				B2A585E81C44CC5D0022E3BE /* YHPopoverAnimation.swift in Sources */,
+				B2017A1F1C6194C600675F9D /* processView.swift in Sources */,
 				B23CFECA1C57443700A6CB3B /* YHPopoverMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,7 +485,10 @@
 			files = (
 				B2F65B971BE1BA340069194E /* ViewController.swift in Sources */,
 				B2F65B951BE1BA340069194E /* AppDelegate.swift in Sources */,
+				B2017A1E1C6194C600675F9D /* indicateSegue.swift in Sources */,
 				B2A585EE1C44DDDD0022E3BE /* detailViewController.swift in Sources */,
+				B2017A201C6194C600675F9D /* processView.swift in Sources */,
+				B2017A1C1C6194C600675F9D /* PresentController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
