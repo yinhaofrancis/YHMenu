@@ -2,7 +2,7 @@
 //  YHTPresentInteractive.swift
 //  YHMenu
 //
-//  Created by YinHao on 16/1/11.
+//  Created by YinHao on 16/1/1  1.
 //  Copyright © 2016年 Suzhou Qier Network Technology Co., Ltd. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ public class YHTPresentInteractive: YHTInteractive{
     {
         self.fromVC = vc
         let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: "location:")
-        gesture.edges = UIRectEdge.Left 
+        gesture.edges = UIRectEdge.Left
         self.fromVC!.view.addGestureRecognizer(gesture)
         PresentID = fromID
         

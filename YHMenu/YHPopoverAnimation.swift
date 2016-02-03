@@ -8,8 +8,8 @@
 
 import UIKit
 
-class YHPopoverAnimation: YHTAnimation {
-    override func animation(view: UIView, transitionContext: UIViewControllerContextTransitioning, startValue: NSValue, endValue: NSValue) {
+public class YHPopoverAnimation: YHTAnimation {
+    override public func animation(view: UIView, transitionContext: UIViewControllerContextTransitioning, startValue: NSValue, endValue: NSValue) {
         view.transform = startValue.CGAffineTransformValue()
         if !self.isPresent
         {

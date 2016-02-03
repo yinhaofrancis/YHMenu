@@ -33,8 +33,13 @@ class ViewController: UIViewController {
                 })
         
     }
-
-    @IBAction func pop(sender: AnyObject) {
-//        self.presentViewController(self.controller!, animated: true, completion: nil)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        segue.destinationViewController.setValue(self.image.image, forKeyPath: "pic")
+        let vc = (segue.destinationViewController as! detailViewController)
+        vc.startFrame = self.image.frame
+        vc.scale = UIScreen.mainScreen().bounds.width / self.image.frame.width
+        vc.customStatus = true
     }
+
+
 }

@@ -20,7 +20,7 @@ public class YHPopoverMenuController: YHTMenuController {
         let o = YHPopoverAnimation()
         o.time = self.time
         o.isPresent = true
-        o.start = NSValue(CGAffineTransform: CGAffineTransformMakeScale(0.001, 0.001))
+        o.start = NSValue(CGAffineTransform:  CGAffineTransformMakeScale(0.001, 0.001))
         o.end = NSValue(CGAffineTransform: CGAffineTransformMakeScale(1, 1))
         return o
     }

@@ -24,11 +24,12 @@ public class YHTMenuController:UIViewController,UIViewControllerTransitioningDel
     @IBInspectable public var alpha:CGFloat = 0.3
     @IBInspectable public var maskColor:UIColor = UIColor.clearColor()
     @IBInspectable public var time:Double = 0.5
-    var interdismiss:YHTInteractive?
+    public var customStatus = false
     @IBInspectable public var interdismissClass:String = "\(YHTMenuController.bundleName).\(YHTInteractive.self)"
-    weak var interpresent:YHTPresentInteractive?
     @IBInspectable public var presentClass:String = "\(YHTMenuController.bundleName).\(YHTPresentController.self)"
-
+    
+    weak var interpresent:YHTPresentInteractive?
+    var interdismiss:YHTInteractive?
     lazy public var transAnimation:YHTAnimation = {
         return self.buildAnimation()
     }()
@@ -66,7 +67,10 @@ public class YHTMenuController:UIViewController,UIViewControllerTransitioningDel
         self.endFrame = CGRectMake(0, 0, self.target.width, self.target.height)
     }
     public func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        self.setStartAndEnd()
+        if customStatus != true
+        {
+            self.setStartAndEnd()
+        }
         interpresent?.frame = self.endFrame
         let present = (NSClassFromString(self.presentClass) as! YHTPresentController.Type).init(presentedViewController: presented, presentingViewController: presenting)
         present.maskColor = self.maskColor
