@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     let inteactive = YHTPresentInteractive()
     override func viewDidLoad() {
         super.viewDidLoad()
-        controller = self.storyboard?.instantiateViewControllerWithIdentifier("panMenu");
     }
 
     override func didReceiveMemoryWarning() {

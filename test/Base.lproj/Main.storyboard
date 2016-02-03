@@ -90,9 +90,15 @@
                             <constraint firstItem="Nwo-FF-N3U" firstAttribute="leading" secondItem="TLR-by-eqS" secondAttribute="leading" id="zIo-pO-KBc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="trans" destination="icj-am-6H4" id="kl8-WI-qpV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdV-Ai-fSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="icj-am-6H4" customClass="YHMenuDelegate" customModule="YHMenu">
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="time">
-                            <real key="value" value="0.29999999999999999"/>
+                        <userDefinedRuntimeAttribute type="rect" keyPath="target">
+                            <rect key="value" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="alpha">
                             <real key="value" value="0.90000000000000002"/>
