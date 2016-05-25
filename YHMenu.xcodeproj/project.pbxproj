@@ -69,18 +69,6 @@
 		B2AF59F51BE097B20029036C /* YHMenu */ = {
 			isa = PBXGroup;
 			children = (
-				B2E967981C43B62000D8DDA3 /* base */,
-				B2AF59F61BE097B20029036C /* YHMenu.h */,
-				B2AF59F81BE097B20029036C /* Info.plist */,
-				B2E967861C43A5ED00D8DDA3 /* YHDropMenuController.swift */,
-				B2A585E51C44C5700022E3BE /* YHPopoverMenuController.swift */,
-			);
-			path = YHMenu;
-			sourceTree = "<group>";
-		};
-		B2E967981C43B62000D8DDA3 /* base */ = {
-			isa = PBXGroup;
-			children = (
 				B2017A181C6194C600675F9D /* PresentController.swift */,
 				B2017A191C6194C600675F9D /* indicateSegue.swift */,
 				B2017A1A1C6194C600675F9D /* processView.swift */,
@@ -91,8 +79,12 @@
 				B2E967921C43AA0C00D8DDA3 /* YHTInteractive.swift */,
 				B2E967941C43AA2D00D8DDA3 /* YHTPresentInteractive.swift */,
 				B23CFEC71C5743F300A6CB3B /* YHMenuDelegate.swift */,
+				B2AF59F61BE097B20029036C /* YHMenu.h */,
+				B2AF59F81BE097B20029036C /* Info.plist */,
+				B2E967861C43A5ED00D8DDA3 /* YHDropMenuController.swift */,
+				B2A585E51C44C5700022E3BE /* YHPopoverMenuController.swift */,
 			);
-			name = base;
+			path = YHMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
