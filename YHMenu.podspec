@@ -20,6 +20,6 @@ Pod::Spec.new do |s|
   #   'PodTestLibrary' => ['Pod/Assets/*.png']
   # }                                       #资源文件地址
 
-  s.public_header_files = 'YHMenu/**/*'   #公开头文件地址
+  s.public_header_files = 'YHMenu/YHMenu.h'   #公开头文件地址
   s.frameworks = 'UIKit'                  #所需的framework，多个用逗号隔开  #依赖关系，该项目所依赖的其他库，如果有多个需要填写多个s.dependency
 end
