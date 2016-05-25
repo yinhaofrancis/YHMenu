@@ -14,6 +14,7 @@
 		B23CFECA1C57443700A6CB3B /* YHPopoverMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A585E51C44C5700022E3BE /* YHPopoverMenuController.swift */; };
 		B2A585E81C44CC5D0022E3BE /* YHPopoverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A585E71C44CC5D0022E3BE /* YHPopoverAnimation.swift */; };
 		B2AF59F71BE097B20029036C /* YHMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AF59F61BE097B20029036C /* YHMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2DA9C3C1CF58D8600FE1851 /* YHMenu.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B2DA9C3B1CF58D8600FE1851 /* YHMenu.podspec */; };
 		B2E9678C1C43A8BF00D8DDA3 /* YHTPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9678B1C43A8BF00D8DDA3 /* YHTPresentController.swift */; };
 		B2E9678E1C43A94000D8DDA3 /* YHTAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E9678D1C43A94000D8DDA3 /* YHTAnimation.swift */; };
 		B2E967931C43AA0C00D8DDA3 /* YHTInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E967921C43AA0C00D8DDA3 /* YHTInteractive.swift */; };
@@ -31,6 +32,7 @@
 		B2AF59F31BE097B20029036C /* YHMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YHMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AF59F61BE097B20029036C /* YHMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHMenu.h; sourceTree = "<group>"; };
 		B2AF59F81BE097B20029036C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2DA9C3B1CF58D8600FE1851 /* YHMenu.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YHMenu.podspec; sourceTree = "<group>"; };
 		B2E967861C43A5ED00D8DDA3 /* YHDropMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHDropMenuController.swift; sourceTree = "<group>"; };
 		B2E9678B1C43A8BF00D8DDA3 /* YHTPresentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHTPresentController.swift; sourceTree = "<group>"; };
 		B2E9678D1C43A94000D8DDA3 /* YHTAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHTAnimation.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		B2AF59E91BE097B20029036C = {
 			isa = PBXGroup;
 			children = (
+				B2DA9C3B1CF58D8600FE1851 /* YHMenu.podspec */,
 				B2AF59F51BE097B20029036C /* YHMenu */,
 				B2AF59F41BE097B20029036C /* Products */,
 			);
@@ -157,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DA9C3C1CF58D8600FE1851 /* YHMenu.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
