@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"           #截图
   s.license          = 'MIT'              #开源协议
   s.author           = { "yinhao" => "13915411914@163.com" }                   #作者信息
-  s.source           = { :git => "https://github.com/yinhaofrancis/YHMenu.git", :commit => "20160525" ,:tag=>"1.0" }      #项目地址，这里不支持ssh的地址，验证不通过，只支持HTTP和HTTPS，最好使用HTTPS
+  s.source           = { :git => "https://github.com/yinhaofrancis/YHMenu.git",:tag=>"1.0" }      #项目地址，这里不支持ssh的地址，验证不通过，只支持HTTP和HTTPS，最好使用HTTPS
   # s.social_media_url = 'https://twitter.com/<twitter_username>'                       #多媒体介绍地址
 
   s.platform     = :ios, '8.0'            #支持的平台及版本
