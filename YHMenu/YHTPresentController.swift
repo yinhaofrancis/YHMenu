@@ -41,7 +41,7 @@ public class YHTPresentController: UIPresentationController {
         self.maskView.backgroundColor = self.maskColor
         self.maskView.frame = self.containerView!.bounds
         self.maskView.autoresizingMask = [.FlexibleHeight,.FlexibleWidth]
-        self.maskView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "back"))
+        self.maskView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(YHTPresentController.back)))
         self.containerView?.addSubview(maskView)
         self.containerView?.addSubview(self.presentedView()!)
     }

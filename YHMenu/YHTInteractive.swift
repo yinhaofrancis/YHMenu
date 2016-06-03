@@ -20,7 +20,7 @@ public class YHTInteractive: UIPercentDrivenInteractiveTransition {
     public func hookViewController(vc:UIViewController)
     {
         self.fromVC = vc
-        self.fromVC!.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "location:"))
+        self.fromVC!.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(YHTInteractive.location(_:))))
     }
     func location(pan:UIPanGestureRecognizer){
         switch(pan.state)

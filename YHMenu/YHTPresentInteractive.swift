@@ -14,7 +14,7 @@ public class YHTPresentInteractive: YHTInteractive{
     public func hookViewController(vc:UIViewController,fromID:String)
     {
         self.fromVC = vc
-        let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: "location:")
+        let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(YHTInteractive.location(_:)))
         gesture.edges = UIRectEdge.Left
         self.fromVC!.view.addGestureRecognizer(gesture)
         PresentID = fromID

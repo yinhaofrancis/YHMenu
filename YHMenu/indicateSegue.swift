@@ -95,7 +95,7 @@ public class indicateController:NSObject,UIViewControllerTransitioningDelegate{
     }
     public func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
         self.dismissController = presented
-        timer = NSTimer.scheduledTimerWithTimeInterval(self.timeOut, target: self, selector: "willDismiss", userInfo: nil, repeats: false)
+        timer = NSTimer.scheduledTimerWithTimeInterval(self.timeOut, target: self, selector: #selector(indicateController.willDismiss), userInfo: nil, repeats: false)
         return indicatePresent(presentedViewController: presented, presentingViewController: presenting)
     }
     public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
